@@ -44,10 +44,8 @@ The RFStock App uses AI to predict the quantity of materials needed for the upco
 After training, the program achieved an accuracy rate of **97.2%**, confirming its reliability and the strength of the algorithms used.
 
 ## Team
-- **Saïd El Alami**: Coordinator
-- **Amour Abdelaziz**: Planning
-- **Joundi Ibrahim**: Database
 - **Brabah Iyad Hatem**: Programmer
+- **Saïd El Alami**: Programmer
 
 ## Acknowledgments
 Thank you for your attention and support in making this project a reality.
