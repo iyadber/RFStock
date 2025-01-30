@@ -1,0 +1,311 @@
+﻿{
+  "Scenario": "Regression",
+  "DataSource": {
+    "Version": 3,
+    "EscapeCharacter": "\"",
+    "ReadMultiLines": false,
+    "KeepDiacritics": false,
+    "KeepPunctuations": false,
+    "AllowQuoting": false,
+    "Type": "TabularFile",
+    "FilePath": "C:\\Users\\iyadb\\OneDrive\\Desktop\\data\\te.csv",
+    "Delimiter": ";",
+    "DecimalMarker": ".",
+    "HasHeader": true,
+    "ColumnProperties": [
+      {
+        "ColumnName": "month",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "vacance",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "nom",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "String",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "qt",
+        "ColumnPurpose": "Label",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "n",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      }
+    ]
+  },
+  "Environment": {
+    "Type": "LocalCPU",
+    "Version": 1
+  },
+  "RunHistory": {
+    "Version": 3,
+    "Type": "Result",
+    "Trials": [
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LbfgsPoissonRegressionRegression",
+        "Score": 0.97264273875871243,
+        "RuntimeInSeconds": 0.114,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e3 * e7",
+          "e0": {
+            "OutputColumnNames": [
+              "vacance",
+              "n"
+            ],
+            "InputColumnNames": [
+              "vacance",
+              "n"
+            ]
+          },
+          "e1": {
+            "InputColumnName": "month",
+            "OutputColumnName": "month"
+          },
+          "e2": {
+            "InputColumnName": "nom",
+            "OutputColumnName": "nom"
+          },
+          "e3": {
+            "InputColumnNames": [
+              "vacance",
+              "n",
+              "month",
+              "nom"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e7": {
+            "L1Regularization": 1.952598,
+            "L2Regularization": 0.52863044,
+            "LabelColumnName": "qt",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LbfgsPoissonRegressionRegression",
+        "Score": 0.91383867443992184,
+        "RuntimeInSeconds": 0.055,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e3 * e7",
+          "e0": {
+            "OutputColumnNames": [
+              "vacance",
+              "n"
+            ],
+            "InputColumnNames": [
+              "vacance",
+              "n"
+            ]
+          },
+          "e1": {
+            "InputColumnName": "month",
+            "OutputColumnName": "month"
+          },
+          "e2": {
+            "InputColumnName": "nom",
+            "OutputColumnName": "nom"
+          },
+          "e3": {
+            "InputColumnNames": [
+              "vacance",
+              "n",
+              "month",
+              "nom"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e7": {
+            "L1Regularization": 3.13571,
+            "L2Regularization": 1.8197833,
+            "LabelColumnName": "qt",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LbfgsPoissonRegressionRegression",
+        "Score": 0.88799841274598812,
+        "RuntimeInSeconds": 0.088,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e3 * e7",
+          "e0": {
+            "OutputColumnNames": [
+              "vacance",
+              "n"
+            ],
+            "InputColumnNames": [
+              "vacance",
+              "n"
+            ]
+          },
+          "e1": {
+            "InputColumnName": "month",
+            "OutputColumnName": "month"
+          },
+          "e2": {
+            "InputColumnName": "nom",
+            "OutputColumnName": "nom"
+          },
+          "e3": {
+            "InputColumnNames": [
+              "vacance",
+              "n",
+              "month",
+              "nom"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e7": {
+            "L1Regularization": 3.534423,
+            "L2Regularization": 0.15102002,
+            "LabelColumnName": "qt",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LbfgsPoissonRegressionRegression",
+        "Score": 0.879164307687701,
+        "RuntimeInSeconds": 0.071,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e3 * e7",
+          "e0": {
+            "OutputColumnNames": [
+              "vacance",
+              "n"
+            ],
+            "InputColumnNames": [
+              "vacance",
+              "n"
+            ]
+          },
+          "e1": {
+            "InputColumnName": "month",
+            "OutputColumnName": "month"
+          },
+          "e2": {
+            "InputColumnName": "nom",
+            "OutputColumnName": "nom"
+          },
+          "e3": {
+            "InputColumnNames": [
+              "vacance",
+              "n",
+              "month",
+              "nom"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e7": {
+            "L1Regularization": 0.78441954,
+            "L2Regularization": 1.7454517,
+            "LabelColumnName": "qt",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LbfgsPoissonRegressionRegression",
+        "Score": 0.87336273923116514,
+        "RuntimeInSeconds": 0.074,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e3 * e7",
+          "e0": {
+            "OutputColumnNames": [
+              "vacance",
+              "n"
+            ],
+            "InputColumnNames": [
+              "vacance",
+              "n"
+            ]
+          },
+          "e1": {
+            "InputColumnName": "month",
+            "OutputColumnName": "month"
+          },
+          "e2": {
+            "InputColumnName": "nom",
+            "OutputColumnName": "nom"
+          },
+          "e3": {
+            "InputColumnNames": [
+              "vacance",
+              "n",
+              "month",
+              "nom"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e7": {
+            "L1Regularization": 2.2575796,
+            "L2Regularization": 0.47321406,
+            "LabelColumnName": "qt",
+            "FeatureColumnName": "Features"
+          }
+        }
+      }
+    ],
+    "Estimators": {
+      "e0": "ReplaceMissingValues",
+      "e1": "FeaturizeText",
+      "e2": "FeaturizeText",
+      "e3": "Concatenate",
+      "e4": "FastTreeRegression",
+      "e5": "FastForestRegression",
+      "e6": "LightGbmRegression",
+      "e7": "LbfgsPoissonRegressionRegression",
+      "e8": "SdcaRegression"
+    },
+    "Schema": "e0 * e1 * e2 * e3 * (e4 + e5 + e6 + e7 + e8)",
+    "MetricName": "RSquared",
+    "ModelFilePath": "C:\\Users\\iyadb\\source\\repos\\DXApplication2\\DXApplication2\\fooding.mlnet"
+  },
+  "Type": "TrainingConfig",
+  "Version": 5,
+  "TrainingOption": {
+    "Version": 2,
+    "Subsampling": false,
+    "Type": "RegressionTrainingOption",
+    "TrainingTime": 200,
+    "LabelColumn": "qt",
+    "ValidationOption": {
+      "Version": 0,
+      "Type": "CrossValidationValidationOption",
+      "NumberOfFolds": 5
+    }
+  }
+}

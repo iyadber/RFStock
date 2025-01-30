@@ -1,0 +1,52 @@
+﻿<dx:ThemedWindow
+    x:Class="DXApplication2.Messages.AddStock"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+        xmlns:uc="clr-namespace:DXApplication2.UserControls"
+    WindowStartupLocation="CenterOwner" AllowsTransparency="True"
+Height="300" Width="650"
+Background="Transparent" WindowStyle="None" 
+    >
+
+
+    <Border CornerRadius="30" Style="{DynamicResource BackgroundBorder}" MouseDown="Border_MouseDown" Padding="0 15 0 0" Margin="20">
+        <Border.Effect>
+            <DropShadowEffect Direction="290" BlurRadius="10" Opacity="0.3" ShadowDepth="5" Color="Black" />
+        </Border.Effect>
+        <Grid >
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition Height="60"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+
+            <uc:MyComboBox x:Name="Product" Grid.Row="0" Grid.Column="0" Caption="Products" />
+            <uc:MyComboBox x:Name="Month" Grid.Row="0" Grid.Column="1" Caption="Months" />
+            <uc:MyTextBox x:Name="Vacance" Grid.Row="1" Grid.Column="0" Caption="Holidays Number" Hint="Write the Number of holidays" KeyDown="Product_KeyDown" />
+            <uc:MyTextBox x:Name="Number" Grid.Row="1" Grid.Column="1" Caption="Students Number" Hint="Enter Students Number" KeyDown="Month_KeyDown" />
+
+            <!--Form Bottom Background-->
+            <Border Grid.Row="3" Grid.ColumnSpan="2"  Style="{DynamicResource BackgroundBorder2}" CornerRadius="0 0 30 30" />
+
+            <!--Main Button-->
+            <Button Grid.Row="3" Grid.Column="1" Content="Save" HorizontalAlignment="Center" Style="{StaticResource mainButton}" Click="Button_Click_1">
+                <Button.Effect>
+                    <DropShadowEffect Direction="-120" BlurRadius="10" Opacity="0.3" ShadowDepth="5" Color="#4880FF"/>
+                </Button.Effect>
+            </Button>
+
+            <!--Secondary Button-->
+            <Button Grid.Row="3" Grid.Column="0" Content="Close" HorizontalAlignment="Center" Style="{StaticResource secondaryButton}" Width="150" Click="Button_Click"/>
+
+
+
+        </Grid>
+    </Border>
+</dx:ThemedWindow>

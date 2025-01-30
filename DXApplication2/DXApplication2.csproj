@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Images\logo.png" />
+    <None Remove="Images\p1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="DevExpress.Images" Version="24.1.3" />
+    <PackageReference Include="DevExpress.Win.Design" Version="24.1.3" />
+    <PackageReference Include="DevExpress.Wpf" Version="24.1.3" />
+    <PackageReference Include="DevExpress.Wpf.Core" Version="24.1.3" />
+    <PackageReference Include="DevExpress.Wpf.ThemesLW" Version="24.1.3" />
+    <PackageReference Include="MahApps.Metro" Version="2.4.10" />
+    <PackageReference Include="MahApps.Metro.IconPacks" Version="5.1.0" />
+    <PackageReference Include="Microsoft.ML" Version="4.0.0" />
+    <PackageReference Include="Plotly.NET" Version="3.0.1" />
+    <PackageReference Include="PresentationFramework.Aero2" Version="1.0.1" />
+  </ItemGroup>
+  <ItemGroup Label="fooding">
+    <None Include="fooding.mlnet">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\logo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\p1.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+</Project>

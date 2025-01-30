@@ -1,0 +1,157 @@
+﻿<dx:ThemedWindow 
+    x:Class="DXApplication2.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+    xmlns:local="clr-namespace:DXApplication2"
+    xmlns:dxwui="http://schemas.devexpress.com/winfx/2008/xaml/windowsui"
+    xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+xmlns:dxga="http://schemas.devexpress.com/winfx/2008/xaml/gauges"
+xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid"
+xmlns:dxr="http://schemas.devexpress.com/winfx/2008/xaml/ribbon"
+    Title="MainWindow" Height="800" Width="1000"
+    ControlBoxButtonSet="None"
+Padding="0"
+StateChanged="Window_StateChanged"
+WindowKind="Ribbon"
+WindowStartupLocation="CenterScreen"
+WindowState="Maximized">
+
+
+    <dx:ThemedWindow.Resources>
+        <local:FrameAnimationSelector x:Key="frameAnimationSelector">
+            <local:FrameAnimationSelector.BackStoryboard>
+                <Storyboard>
+                    <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetProperty="NewContent.(UIElement.Opacity)">
+                        <SplineDoubleKeyFrame Value="0" KeyTime="00:00:00" />
+                        <SplineDoubleKeyFrame Value="1" KeyTime="00:00:00.400" />
+                    </DoubleAnimationUsingKeyFrames>
+                    <DoubleAnimation
+                        BeginTime="00:00:00"
+                        Duration="00:00:00.500"
+                        From="1"
+                        Storyboard.TargetProperty="NewContentTranslateX"
+                        To="0">
+                        <DoubleAnimation.EasingFunction>
+                            <CubicEase EasingMode="EaseOut" />
+                        </DoubleAnimation.EasingFunction>
+                    </DoubleAnimation>
+                    <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetProperty="OldContent.(UIElement.Opacity)">
+                        <SplineDoubleKeyFrame Value="1" KeyTime="00:00:00" />
+                        <SplineDoubleKeyFrame Value="0" KeyTime="00:00:00.100" />
+                    </DoubleAnimationUsingKeyFrames>
+                </Storyboard>
+            </local:FrameAnimationSelector.BackStoryboard>
+            <local:FrameAnimationSelector.ForwardStoryboard>
+                <Storyboard>
+                    <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetProperty="NewContent.(UIElement.Opacity)">
+                        <SplineDoubleKeyFrame Value="0" KeyTime="00:00:00" />
+                        <SplineDoubleKeyFrame Value="1" KeyTime="00:00:00.400" />
+                    </DoubleAnimationUsingKeyFrames>
+                    <DoubleAnimation
+                        BeginTime="00:00:00"
+                        Duration="00:00:00.500"
+                        From="-1"
+                        Storyboard.TargetProperty="NewContentTranslateX"
+                        To="0">
+                        <DoubleAnimation.EasingFunction>
+                            <CubicEase EasingMode="EaseOut" />
+                        </DoubleAnimation.EasingFunction>
+                    </DoubleAnimation>
+                    <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetProperty="OldContent.(UIElement.Opacity)">
+                        <SplineDoubleKeyFrame Value="1" KeyTime="00:00:00" />
+                        <SplineDoubleKeyFrame Value="0" KeyTime="00:00:00.100" />
+                    </DoubleAnimationUsingKeyFrames>
+                </Storyboard>
+            </local:FrameAnimationSelector.ForwardStoryboard>
+        </local:FrameAnimationSelector>
+        <dx:BoolToObjectConverter x:Key="boolToObjectConverter" TrueValue="{StaticResource frameAnimationSelector}" />
+        <dx:BoolInverseConverter x:Key="boolInverseConverter" />
+    </dx:ThemedWindow.Resources>
+    <dx:ThemedWindow.HeaderItems>
+
+        <Button
+            x:Name="btntheme"
+            Width="40"
+            Height="30"
+            Margin="10 0"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Top"
+            Click="btntheme_Click"
+            Style="{StaticResource topButton}">
+            <Icon:PackIconMaterial
+                Width="20"
+                Height="20"
+                Margin="0 5 0 0"
+                HorizontalAlignment="Center"
+                Foreground="Black"
+                Kind="WeatherNight"
+                Name="ThemeIcon"
+                Style="{StaticResource menuButtonIcon}" />
+        </Button>
+
+        <Button
+            x:Name="btnMin"
+            Width="50"
+            Height="30"
+            Margin="0"
+            Click="btnMin_Click"
+            Style="{StaticResource windowButtonMin}">
+
+            <StackPanel Orientation="Horizontal">
+                <Icon:PackIconMaterial
+                    Width="13"
+                    Height="13"
+                    Margin="0,0,-10,0"
+                    Kind="WindowMinimize"
+                    Style="{StaticResource menuButtonIcon}" />
+            </StackPanel>
+        </Button>
+        <Button
+            x:Name="btnMax"
+            Width="50"
+            Height="30"
+            Margin="0"
+            Click="btnMax_Click"
+            Style="{StaticResource windowButtonMax}">
+
+            <StackPanel Orientation="Horizontal">
+                <Icon:PackIconMaterial
+                    x:Name="IconMax"
+                    Width="12"
+                    Height="12"
+                    Margin="0"
+                    Kind="DockWindow"
+                    Style="{StaticResource menuButtonIcon}" />
+            </StackPanel>
+        </Button>
+        <Button
+            x:Name="btnExit"
+            Width="50"
+            Height="30"
+            Margin="0"
+            Click="btnExit_Click"
+            Style="{StaticResource windowButtonClose}">
+
+            <StackPanel Orientation="Horizontal">
+                <Icon:PackIconMaterial
+                    Width="12"
+                    Height="12"
+                    Margin="0"
+                    Kind="WindowClose"
+                    Style="{StaticResource menuButtonIcon}" />
+            </StackPanel>
+
+        </Button>
+
+
+    </dx:ThemedWindow.HeaderItems>
+
+    <dxwui:NavigationFrame x:Name="mainPage" 
+                           AnimationSelector="{Binding IsChecked, ElementName=customAnimationCheck, Converter={StaticResource boolToObjectConverter}}"
+AnimationSpeedRatio="1.1"
+BackNavigationMode="PreviousScreen" />
+    
+    
+</dx:ThemedWindow>
